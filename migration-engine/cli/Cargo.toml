@@ -16,7 +16,12 @@ structopt = "0.3.8"
 tokio = { version = "1.0", default-features = false, features = ["macros"] }
 tracing = "0.1"
 tracing-error = "0.2"
-tracing-subscriber = { version = "0.3", features = [ "fmt", "json", "time", "env-filter" ] }
+tracing-subscriber = { version = "0.3", features = [
+  "fmt",
+  "json",
+  "time",
+  "env-filter",
+] }
 serde_json = "1.0.74"
 
 [dev-dependencies]
@@ -28,6 +33,7 @@ connection-string = "0.1"
 
 [dev-dependencies.quaint]
 git = "https://github.com/prisma/quaint"
+rev = "a0722f26311669377ca9069843e8866a1706c42a"
 
 [[bin]]
 name = "migration-engine"

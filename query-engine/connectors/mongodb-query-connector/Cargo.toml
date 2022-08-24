@@ -51,6 +51,7 @@ version = "1.0"
 
 [dependencies.cuid]
 git = "https://github.com/prisma/cuid-rust"
+rev = "4ffb2e47c772af62fed3ddc92bb7fc444d19e159"
 
 [dependencies.user-facing-errors]
 features = ["sql"]

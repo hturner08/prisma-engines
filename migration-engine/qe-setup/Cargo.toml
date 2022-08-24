@@ -17,9 +17,5 @@ url = "2"
 
 [dependencies.quaint]
 git = "https://github.com/prisma/quaint"
-features = [
-    "sqlite",
-    "postgresql",
-    "mysql",
-    "mssql",
-]
+rev = "a0722f26311669377ca9069843e8866a1706c42a"
+features = ["sqlite", "postgresql", "mysql", "mssql"]

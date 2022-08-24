@@ -6,7 +6,7 @@ edition = "2021"
 
 [dependencies]
 datamodel = { path = "../../libs/datamodel/core" }
-sql-datamodel-connector= { path = "../../libs/datamodel/connectors/sql-datamodel-connector" }
+sql-datamodel-connector = { path = "../../libs/datamodel/connectors/sql-datamodel-connector" }
 migration-core = { path = "../core" }
 sql-migration-connector = { path = "../connectors/sql-migration-connector" }
 sql-schema-describer = { path = "../../libs/sql-schema-describer" }
@@ -35,4 +35,5 @@ url = "2.1.1"
 
 [dependencies.quaint]
 git = "https://github.com/prisma/quaint"
+rev = "a0722f26311669377ca9069843e8866a1706c42a"
 features = ["vendored-openssl"]

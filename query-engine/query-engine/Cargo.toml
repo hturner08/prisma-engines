@@ -1,5 +1,8 @@
 [package]
-authors = ["Dominic Petrick <dompetrick@gmail.com>", "Katharina Fey <kookie@spacekookie.de>"]
+authors = [
+  "Dominic Petrick <dompetrick@gmail.com>",
+  "Katharina Fey <kookie@spacekookie.de>",
+]
 edition = "2021"
 name = "query-engine"
 version = "0.1.0"
@@ -20,7 +23,7 @@ connection-string = "0.1.10"
 connector = { path = "../connectors/query-connector", package = "query-connector" }
 datamodel = { path = "../../libs/datamodel/core" }
 datamodel-connector = { path = "../../libs/datamodel/connectors/datamodel-connector" }
-graphql-parser = { git = "https://github.com/prisma/graphql-parser" }
+graphql-parser = { git = "https://github.com/prisma/graphql-parser", rev = "6a3f58bd879065588e710cb02b5bd30c1ce182c3" }
 indexmap = { version = "1.7", features = ["serde-1"] }
 itertools = "0.10"
 mongodb-connector = { path = "../connectors/mongodb-query-connector", optional = true, package = "mongodb-query-connector" }
@@ -29,7 +32,10 @@ prisma-models = { path = "../prisma-models" }
 query-core = { path = "../core" }
 request-handlers = { path = "../request-handlers" }
 serde = { version = "1.0", features = ["derive"] }
-serde_json = { version = "1.0", features = ["preserve_order", "float_roundtrip"] }
+serde_json = { version = "1.0", features = [
+  "preserve_order",
+  "float_roundtrip",
+] }
 sql-connector = { path = "../connectors/sql-query-connector", optional = true, package = "sql-query-connector" }
 structopt = "0.3"
 thiserror = "1.0"
@@ -45,7 +51,7 @@ opentelemetry-otlp = { version = "0.9", features = ["tls", "tls-roots"] }
 rand = "0.8"
 tonic = { version = "0.4", default-features = false }
 
-user-facing-errors = {path = "../../libs/user-facing-errors"}
+user-facing-errors = { path = "../../libs/user-facing-errors" }
 
 [build-dependencies]
 rustc_version = "0.2.3"
@@ -69,3 +75,4 @@ features = [
   "bigdecimal",
 ]
 git = "https://github.com/prisma/quaint"
+rev = "a0722f26311669377ca9069843e8866a1706c42a"
