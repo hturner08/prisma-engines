@@ -15,7 +15,7 @@ use std::{
     ops::Deref,
     usize,
 };
-use tracing::log::trace;
+use tracing::trace;
 use user_facing_errors::query_engine::DatabaseConstraint;
 
 #[cfg(feature = "mysql")]
