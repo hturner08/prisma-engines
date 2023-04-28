@@ -11,6 +11,7 @@ use std::borrow::Cow;
 
 const NATIVE_TYPE_CONSTRUCTORS: &[NativeTypeConstructor] = &[];
 const CONSTRAINT_SCOPES: &[ConstraintScope] = &[ConstraintScope::GlobalKeyIndex];
+#[cfg(not(feature = "sqlite-create-many"))]
 const CAPABILITIES: ConnectorCapabilities = enumflags2::make_bitflags!(ConnectorCapability::{
     AnyId |
     AutoIncrement |
@@ -24,6 +25,23 @@ const CAPABILITIES: ConnectorCapabilities = enumflags2::make_bitflags!(Connector
     OrderByNullsFirstLast |
     SupportsTxIsolationSerializable |
     NativeUpsert
+});
+#[cfg(feature = "sqlite-create-many")]
+const CAPABILITIES: ConnectorCapabilities = enumflags2::make_bitflags!(ConnectorCapability::{
+    AnyId |
+    AutoIncrement |
+    CompoundIds |
+    SqlQueryRaw |
+    RelationFieldsInArbitraryOrder |
+    UpdateableId |
+    ImplicitManyToManyRelation |
+    DecimalType |
+    BackwardCompatibleQueryRaw |
+    OrderByNullsFirstLast |
+    SupportsTxIsolationSerializable |
+    NativeUpsert |
+    CreateMany |
+    CreateSkipDuplicates
 });
 
 pub struct SqliteDatamodelConnector;
