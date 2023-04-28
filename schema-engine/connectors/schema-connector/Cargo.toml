@@ -4,7 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [features]
-default = ["mssql", "mysql", "postgresql", "sqlite"]
 mssql = ["user-facing-errors/mssql"]
 mysql = ["user-facing-errors/mysql"]
 postgresql = ["user-facing-errors/postgresql"]
