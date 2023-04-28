@@ -3,6 +3,9 @@ name = "psl"
 version = "0.1.0"
 edition = "2021"
 
+[features]
+sqlite-create-many = ["builtin-psl-connectors/sqlite-create-many"]
+
 [dependencies]
 builtin-psl-connectors = { path = "../builtin-connectors" }
 psl-core = { path = "../psl-core" }
