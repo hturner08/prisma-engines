@@ -4012,6 +4012,7 @@ dependencies = [
  "rand 0.7.3",
  "serde",
  "serde_json",
+ "socket2",
  "thiserror",
  "tokio",
  "tracing",
